@@ -2,6 +2,7 @@
 
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 	<title>Rdio - Luke Chesser</title>
 
 	<link rel="stylesheet" href="css/reset.css" />
@@ -10,6 +11,20 @@
 		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 
+<body>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
 
 
 <body>
@@ -23,15 +38,26 @@
 						</div>
 					</div>
 					<div class="col-3">
-
-						<form method="POST" action="index.html">
-							<input type="search" required class="search">
-							<input type="submit" name="submit" value="Rechercher" class="submit">
-						</form>
+						<div class="d-none d-sm-block">
+							<form method="POST" action="index.html">
+								<input type="search" required class="search">
+								<input type="submit" name="submit" value="Rechercher" class="submit">
+							</form>
+						</div>
 					</div>
 					<div class="col">
 						<div class="user">
-							<a href="#">Luke Chesser</a>
+							<div class="btn-group dropleft">
+								<a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false">
+									Luke Chesser
+								</a>
+
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="#">Luke Chesser</a>
+									<a class="dropdown-item" href="#">Top Album</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -77,10 +103,21 @@
 									<div class="col">
 										<div class="name">
 											<h1>Luke Chesser</h1>
-											<p>Montreal, Quebec, Canada <a href="https://www.facebook.com/"
-													target="_blank"><img class="share" src="img/icon/fb.png" /></a><a
-													href="https://twitter.com/" target="_blank"><img class="share"
-														src="img/icon/twitter.png" /></a></p>
+											<div class="container-fluid">
+												<div class="row">
+													<p>Montreal, Quebec, Canada</p>
+													<div class="col">
+														<div class="d-none d-sm-block">
+															<p>
+																<a href="https://www.facebook.com/" target="_blank"><img
+																		class="share" src="img/icon/fb.png" /></a>
+																<a href="https://twitter.com/" target="_blank"><img
+																		class="share" src="img/icon/twitter.png" /></a>
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -89,7 +126,7 @@
 						<div class="stats-links">
 							<div class="container-fluid">
 								<div class="row">
-									<div class="col-10">
+									<div class="col-lg-10">
 										<section class="stats">
 											<span>2 Playlists</span>
 											<span>4 Reviews</span>
@@ -109,16 +146,12 @@
 							</div>
 						</div>
 					</header>
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-10">
-								<h2>Top Album</h2>
-							</div>
-							<div class="col">
-								<div>
-									<a class="station" href="#">Start Station</a>
-								</div>
-							</div>
+					<div class="row">
+						<div class="col-xs-1 col-sm-8 col-md-10 col-lg-10">
+							<h2>Top Album</h2>
+						</div>
+						<div class="col">
+							<a class="station" href="#">Start Station</a>
 						</div>
 					</div>
 					<section id="albums">
